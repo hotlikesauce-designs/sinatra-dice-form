@@ -1,4 +1,4 @@
-<%= params %>
+<% params %>
 
 <h1>
   <%= @num_dice %>d<%= @num_sides %>
@@ -6,6 +6,6 @@
 
 <ol>
 <% @rolls.each do |a_roll| %>
-  <li> <%= a_roll %> </li>
+  <li> Result: <%= a_roll %> </li>
 <% end %>
 <ol>
