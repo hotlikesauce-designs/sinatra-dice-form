@@ -5,6 +5,13 @@ get("/") do
   erb(:homepage)
 end
 
+get("/process_roll") do
+  @num_dice = params.fetch("dice").to_i
+  @num_sides = params.fetch("sides").to_i
+
+  erb(:results)
+end
+
 get("/dice/:number_of_dice/:number_of_sides") do
   @num_dice = params.fetch("number_of_dice").to_i
   @num_sides = params.fetch("number_of_sides").to_i
